@@ -129,22 +129,3 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# Configuración básica de SMTP para enviar correos
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.example.com'  # Servidor SMTP
-# EMAIL_PORT = 587  # Puerto de SMTP, generalmente es 587 para TLS o 465 para SSL
-# EMAIL_USE_TLS = True  # Activa TLS para mayor seguridad
-# EMAIL_USE_SSL = False  # Alternativa: puedes usar SSL en lugar de TLS
-# EMAIL_HOST_USER = 'tuemail@example.com'  # Tu dirección de correo
-# EMAIL_HOST_PASSWORD = 'tucontraseña'  # Contraseña de tu cuenta de correo
-# DEFAULT_FROM_EMAIL = 'tuemail@example.com'  # Dirección de correo predeterminada para enviar correos
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP de Gmail
-EMAIL_PORT = 587  # Puerto para TLS
-EMAIL_USE_TLS = True  # Habilitar TLS (para una conexión segura)
-EMAIL_USE_SSL = False  # No necesitas SSL si usas TLS
-EMAIL_HOST_USER = 'ogaip87@gmail.com'  # Tu dirección de correo de Gmail
-EMAIL_HOST_PASSWORD = 'ufhe drjv wuly jzlp'  # La contraseña de tu cuenta de Gmail o una contraseña de aplicación
-DEFAULT_FROM_EMAIL = 'noreply@gmail.com'  # Correo predeterminado para los envíos
