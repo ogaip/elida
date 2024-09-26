@@ -1,0 +1,121 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+  <div class="card-body">
+    <h2 class="text-center">PORTAL DE ACCESO A LA INFORMACIÓN PÚBLICA - MINISTERIO PÚBLICO</h2>
+    <p class="card-text">INTRODUCCIÓN</p>
+  </div>
+</div>
+<div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+  
+    
+      <form action="{% url 'proceso' %}"
+            method="post"
+            enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row mt-3 mb-3" id="datosSolicitate">
+          <div class="card border-danger">
+            <div class="card-body">
+              <h4 class="card-title">Datos del Solicitante</h4>
+              <br>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="lugarHecho">Nombre y Apellido</label>
+                  <input class="form-control" type="text" id="nombreSol" name="nombreSol" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="institucionAfectada">Nacionalidad:</label>
+                  <input class="form-control" type="text" id="nacioSol" name="nacioSol" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="institucionAfectada">Sexo:</label>
+                  <input class="form-control" type="text" id="sexoSol" name="sexoSol" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="fechaHecho">Fecha de Nacimiento:</label>
+                  <input class="form-control" type="date" id="fNaci" name="fNaci" />
+                </div>
+              </div>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold">Domicilio Real:</label>
+                  <input id="domiSol" name="domiSol" class="form-control" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="ciudad">Correo Electrónico:</label>
+                  <input class="form-control" name="correoSol" id="correoSol" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="barrio">Departamento:</label>
+                  <input class="form-control" type="text" id="dptoSol" name="dptoSol" />
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <label class="form-label fw-bold" for="barrio">Distrito:</label>
+                  <input class="form-control" type="text" id="distritoSol" name="distritoSol" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 mb-3" id="datosSolicitud">
+          <div class="card border-danger">
+            <div class="card-body">
+              <h4 class="card-title">Datos de la Solicitud</h4>
+              <br>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-4">
+                  <label class="form-label fw-bold" for="fechaHecho">Fecha de la Solicitud:</label>
+                  <input class="form-control" type="date" id="fechaSol" name="fechaSol" />
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label class="form-label fw-bold" for="lugarHecho">Institución:</label>
+                  <input class="form-control" type="text" id="instSol" name="instSol" />
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label class="form-label fw-bold" for="institucionAfectada">Título:</label>
+                  <input class="form-control" type="text" id="tituSol" name="tituSol" />
+                </div>
+              </div>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-6">
+                  <label class="form-label fw-bold">Tipo de respuesta: (correo/celular/físico)</label>
+                  <input id="respSol" name="respSol" class="form-control" />
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <label class="form-label fw-bold" for="ciudad">Formato/Soporte:</label>
+                  <input class="form-control" name="formatoSol" id="formatoSol" />
+                </div>
+              </div>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-12">
+                  <label class="form-label fw-bold" for="descripcionHecho">Descripción de la solicitud:</label>
+                  <textarea class="form-control"
+                            id="descripcionHecho"
+                            name="descripcionHecho"
+                            rows="10"></textarea>
+                </div>
+              </div>
+              <div class="row bm-3 mt-3">
+                <div class="col-xs-12 col-md-12">
+                  <label for="formFile" class="form-label fw-bold">Adjuntar Documento</label>
+                  <input class="form-control"
+                         type="file"
+                         id="archivo_adjunto"
+                         name="archivo_adjunto" />
+                  <small>Se admiten los siguientes tipos de archivos: pdf, txt,
+                  png, jpg, jpeg</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 mb-3" id="botonEnviar">
+          <p class="text-center">
+            <button type="submit" class="btn btn-danger" name="btn_enviar">Enviar Solicitud</button>
+          </p>
+        </div>
+      </form>
+    </div>
+  
+
+{% endblock content %}

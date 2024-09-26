@@ -1,0 +1,71 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+
+# Archivos de configuración del entorno
+*.env
+*.local
+
+# Bytecode compilado de Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Archivos de caché y logs
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.cover
+coverage.xml
+*.db
+*.sqlite3
+
+# Bases de datos locales
+*.sqlite3
+
+# Configuración de Django
+db.sqlite3
+media/
+staticfiles/
+
+# Archivos de migración (Django)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# Archivos de configuración del IDE/editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de seguridad
+secrets.json
+
+# Archivos de paquetes
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Archivos creados por tests
+htmlcov/
+.tox/
+nosetests.xml
+coverage/
+dist/
+build/
+
+# Carpetas de compilación
+*.egg-info/
+.eggs/
+*.whl
